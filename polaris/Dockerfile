@@ -1,14 +1,15 @@
 # CHANGE THIS IMAGE TO THE BASE IMG FROM YOUR BUILD TOOL
+
 # FOR A MAVEN PROJECT THE BELOW BASE IMG WORKS FINE
 
 FROM maven:3.6.1-jdk-8
-
-# DO NOT EDIT BELOW THIS LINE
 
 RUN  apt-get update \
   && apt-get install -y wget \
   && apt-get install -y unzip \
   && rm -rf /var/lib/apt/lists/*
+
+# DO NOT EDIT BELOW THIS LINE
 
 ENV SWIP_ACCESS_TOKEN=$SWIP_ACCESS_TOKEN
 ENV SWIP_SERVER_URL=$SWIP_SERVER_URL
