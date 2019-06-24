@@ -6,4 +6,4 @@ The Synopsys Detect GitHub Action makes it easy to scan GitHub repositories with
 
 ## Usage
 
-See the [official documentation] (https://synopsys.atlassian.net/wiki/spaces/PARTNERS/pages/151093290/Synopsys+Detect+GitHub+Action) on how to use this action.
+See the [official documentation](https://synopsys.atlassian.net/wiki/spaces/PARTNERS/pages/151093290/Synopsys+Detect+GitHub+Action) on how to use this action.
