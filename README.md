@@ -7,3 +7,29 @@ The Synopsys Detect GitHub Action makes it easy to scan GitHub repositories with
 ## Usage
 
 See the [official documentation](https://synopsys.atlassian.net/wiki/spaces/PARTNERS/pages/151093290/Synopsys+Detect+GitHub+Action) on how to use this action.
+
+## New YAML configs (Official docs will be updated soon)
+
+``` 
+name: Java CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Synopsys Detect Action
+      id: detect
+      uses: gautambaghel/synopsys-detect@v1.6
+      with:
+        args: --detect.tools=SIGNATURE_SCAN --blackduck.url="${{ secrets.BLACKDUCK_URL}}" --blackduck.api.token="${{ secrets.BLACKDUCK_API_TOKEN}}"
+
+```
