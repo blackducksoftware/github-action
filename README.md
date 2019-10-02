@@ -28,7 +28,7 @@ jobs:
         java-version: 1.8
     - name: Synopsys Detect Action
       id: detect
-      uses: gautambaghel/synopsys-detect@v1.6
+      uses: blackducksoftware/github-action@v1.0.2
       with:
         args: --detect.tools=SIGNATURE_SCAN --blackduck.url="${{ secrets.BLACKDUCK_URL}}" --blackduck.api.token="${{ secrets.BLACKDUCK_API_TOKEN}}"
 
