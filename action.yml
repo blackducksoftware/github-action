@@ -1,8 +1,9 @@
 name: 'Synopsys Detect'
 description: 'Runs Detect script to find out vulnerabilities.'
 author: 'Gautam Baghel @ Synopsys'
-icon: 'alert-circle'
-color: 'purple'
+branding:
+  icon: 'shield'
+  color: 'purple'
 inputs:
   args:
     description: 'Synopsys Detect arguments'
