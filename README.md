@@ -21,15 +21,15 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v1
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Synopsys Detect Action
-      id: detect
-      uses: blackducksoftware/github-action@v1.0.2
-      with:
-        args: --detect.tools=SIGNATURE_SCAN --blackduck.url="${{ secrets.BLACKDUCK_URL}}" --blackduck.api.token="${{ secrets.BLACKDUCK_API_TOKEN}}"
+      - name: Checkout
+        uses: actions/checkout@v2.0.0
+      - name: Polaris
+        uses: ./
+        with:
+          args: '--polaris.url="${{ secrets.POLARIS_URL}}" --polaris.access.token="${{ secrets.POLARIS_TOKEN}}" --detect.tools="POLARIS"'
+      - name: Synopsys Detect
+        uses: ./
+        with:
+          args: '--blackduck.url="${{ secrets.BLACKDUCK_URL}}" --blackduck.api.token="${{ secrets.BLACKDUCK_API_TOKEN}}" --detect.risk.report.pdf=true'
 
 ```
