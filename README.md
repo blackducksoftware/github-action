@@ -17,14 +17,18 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout
-        uses: actions/checkout@2.0.0
+      - uses: actions/checkout@v1
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      // Build your project here eg. mvn clean package
       - name: Polaris
-        uses: ./
+        uses: blackducksoftware/github-action@2.0.0
         with:
           args: '--polaris.url="${{ secrets.POLARIS_URL}}" --polaris.access.token="${{ secrets.POLARIS_TOKEN}}" --detect.tools="POLARIS"'
       - name: Synopsys Detect
-        uses: ./
+        uses: blackducksoftware/github-action@2.0.0
         with:
           args: '--blackduck.url="${{ secrets.BLACKDUCK_URL}}" --blackduck.api.token="${{ secrets.BLACKDUCK_API_TOKEN}}" --detect.risk.report.pdf=true'
 
