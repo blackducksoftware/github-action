@@ -22,7 +22,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      // Build your project here eg. mvn clean package
+      # -- Build your project here -- eg. mvn clean package
       - name: Polaris
         uses: blackducksoftware/github-action@2.0.0
         with:
