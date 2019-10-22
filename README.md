@@ -5,9 +5,9 @@
 The Synopsys Detect GitHub Action makes it easy to scan GitHub repositories with Synopsys Application Security tools, which include the scanning functionality of Coverity on Polaris and Black Duck. Synopsys Detect makes it easy to set up and scan codebases that use a variety of languages and package managers. The Synopsys Detect GitHub Action allows your organization to easily add vulnerability testing on a variety of GitHub Platform events, such as push, pull, issue, and release.
 
 ## Usage
-See the <a href="https://synopsys.atlassian.net/wiki/spaces/PARTNERS/pages/151093290/Synopsys+Detect+GitHub+Action" target="_blank">official documentation</a> on how to use this action.
+See the  on how to use this action.
 
-## New YAML configs (Official docs will be updated soon)
+## Example YAML config (See <a href="https://synopsys.atlassian.net/wiki/spaces/PARTNERS/pages/151093290/Synopsys+Detect+GitHub+Action" target="_blank">official documentation</a> for more information)
 
 ``` 
 name: Java CI
