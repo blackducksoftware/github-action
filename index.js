@@ -16,7 +16,6 @@ if (IS_WINDOWS) {
 
 if (returnCode == 3) {
     core.warning(`Project contains policy violations`)
-    return;
     // will be added in @actions/core v2
     // core.setNeutral(`Project contains policy violations`)
 }
