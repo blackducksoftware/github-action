@@ -1,5 +1,5 @@
 name: 'Synopsys Detect'
-description: 'Add SAST and SCA scanning to your GitHub repositories with Synopsys application security tools, including Coverity on Polaris and Black Duck.'
+description: 'Add SAST and SCA scanning to your GitHub repositories with Synopsys Coverity on Polaris and Black Duck.'
 author: 'Gautam Baghel @ Synopsys'
 branding:
   icon: 'shield'
