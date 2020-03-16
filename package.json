@@ -1,0 +1,29 @@
+{
+  "name": "synopsys-detect-github-action",
+  "version": "1.0.0",
+  "description": "Synopsys Detect integration with Github Actions to easily add vulnerability testing",
+  "main": "index.js",
+  "dependencies": {
+    "shelljs": "^0.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackducksoftware/github-action.git"
+  },
+  "keywords": [
+    "scan",
+    "detect",
+    "security",
+    "quality"
+  ],
+  "author": "Gautam Baghel <gautamb@synopsys.com>",
+  "license": "Apache License 2.0",
+  "bugs": {
+    "url": "https://github.com/blackducksoftware/github-action/issues"
+  },
+  "homepage": "https://github.com/blackducksoftware/github-action#readme"
+}
