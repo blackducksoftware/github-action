@@ -4,6 +4,7 @@
   "description": "Synopsys Detect integration with Github Actions to easily add vulnerability testing",
   "main": "index.js",
   "dependencies": {
+    "@actions/core": "^1.2.3",
     "shelljs": "^0.8.3"
   },
   "devDependencies": {},
@@ -21,7 +22,13 @@
     "quality"
   ],
   "author": "Gautam Baghel <gautamb@synopsys.com>",
-  "license": "Apache License 2.0",
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
   "bugs": {
     "url": "https://github.com/blackducksoftware/github-action/issues"
   },
