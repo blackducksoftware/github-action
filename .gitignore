@@ -42,7 +42,9 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules/
+# Cannot Apply for Github Actions (https://help.github.com/en/actions/building-actions/creating-a-javascript-action)
+# zeit/ncc is an option but shellJS doesn't work properly (https://github.com/zeit/ncc/issues/476)
+# node_modules/
 jspm_packages/
 
 # TypeScript v1 declaration files
