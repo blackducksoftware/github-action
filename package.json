@@ -4,7 +4,7 @@
   "description": "Synopsys Detect integration with Github Actions to easily add vulnerability testing",
   "main": "index.js",
   "dependencies": {
-    "@actions/core": "^1.2.3",
+    "@actions/core": "^1.2.6",
     "shelljs": "^0.8.3"
   },
   "devDependencies": {},
