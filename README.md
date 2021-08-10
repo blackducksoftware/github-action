@@ -55,7 +55,6 @@ jobs:
       - name: Synopsys Detect
         uses: blackducksoftware/github-action@v2
         with:
-          version: 7
           args: '--blackduck.url="${{ secrets.BLACKDUCK_URL}}" --blackduck.api.token="${{ secrets.BLACKDUCK_API_TOKEN}}" --detect.risk.report.pdf=true'
 
 ```
