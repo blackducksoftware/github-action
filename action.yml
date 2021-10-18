@@ -5,9 +5,15 @@ branding:
   icon: 'shield'
   color: 'purple'
 inputs:
+  blackduck.url:
+    description: 'Black Duck server url'
+    required: true
+  blackduck.api.token:
+    description: 'Black Duck API token'
+    required: true
   args:
     description: 'Synopsys Detect arguments'
-    required: true
+    required: false
 runs:
   using: 'node12'
   main: 'index.js'
