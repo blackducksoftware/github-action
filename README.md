@@ -95,7 +95,7 @@ jobs:
 
 ```
 
-## Running this GitHub Action locally (w/o GitHub Actions)
+## Running this GitHub Action locally  (w/o GitHub Actions)
 
 ```bash
 env INPUT_ARGS="--blackduck.url='<>' --blackduck.api.token='<>'" INPUT_VERSION="7" node index.js
