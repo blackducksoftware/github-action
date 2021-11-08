@@ -25,12 +25,44 @@ jobs:
           java-version: 1.8
       # -- Build your project here -- eg. mvn clean package
       - name: Synopsys Detect
-        uses: blackducksoftware/github-action@v2
+        uses: blackducksoftware/github-action@v2.2
         with:
           version: 7
           blackduck.url: ${{ secrets.BLACKDUCK_URL }}
           blackduck.api.token: ${{ secrets.BLACKDUCK_API_TOKEN }}
-          args: '--detect.risk.report.pdf=true'
+          args: --detect.risk.report.pdf=true
+
+```
+
+## Example YAML config for running Rapid Scan
+
+```yaml
+
+name: Java CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      # -- Build your project here -- eg. mvn clean package
+      - name: Synopsys Detect
+        uses: blackducksoftware/github-action@v2.2
+        with:
+          version: 7
+          blackduck.url: ${{ secrets.BLACKDUCK_URL }}
+          blackduck.api.token: ${{ secrets.BLACKDUCK_API_TOKEN }}
+          args: >
+            --detect.blackduck.scan.mode=RAPID
+            --detect.policy.check.fail.on.severities="BLOCKER"
 
 ```
 
@@ -55,7 +87,7 @@ jobs:
           java-version: 1.8
       # -- Build your project here -- eg. mvn clean package
       - name: Synopsys Detect
-        uses: blackducksoftware/github-action@v2
+        uses: blackducksoftware/github-action@v2.2
         with:
           blackduck.url: ${{ secrets.BLACKDUCK_URL }}
           blackduck.api.token: ${{ secrets.BLACKDUCK_API_TOKEN }}
@@ -63,7 +95,7 @@ jobs:
 
 ```
 
-## Running this GitHub Action locally
+## Running this GitHub Action locally (w/o GitHub Actions)
 
 ```bash
 env INPUT_ARGS="--blackduck.url='<>' --blackduck.api.token='<>'" INPUT_VERSION="7" node index.js
